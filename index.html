@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Marla to Square Feet Converter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #converter {
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        input {
+            width: 80%;
+            height: 50px;
+            font-size: 24px;
+            text-align: center;
+            border: none;
+            background-color: #222;
+            color: #fff;
+        }
+        button {
+            width: 80%;
+            height: 50px;
+            font-size: 24px;
+            background-color: #f06d06;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d75c05;
+        }
+    </style>
+
+<body>
+    <div id="converter">
+        <h1>Marla to Square Feet Converter</h1>
+        <input id="marlaInput" type="number" placeholder="Enter Marla area" step="0.01">
+        <button onclick="convertArea()">Convert</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convertArea() {
+            const marla = parseFloat(document.getElementById('marlaInput').value);
+            if (!isNaN(marla)) {
+                const squareFeet = marla * 272.25; // 1 Marla = 272.25 square feet
+                document.getElementById('result').textContent = `Result: ${squareFeet.toFixed(2)} square feet`;
+            } else {
+                document.getElementById('result').textContent = 'Please enter a valid area in Marla.';
+            }
+        }
+    </script>
+    
+   
+
+</body>
+</head>
+
+</html>
+</body>
+</html>
